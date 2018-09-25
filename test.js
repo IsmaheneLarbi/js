@@ -1,12 +1,23 @@
 "use strict";
 
-let user = {
-  name: "John",
-  hi() { alert(this.name); },
-  bye() { alert("Bye"); }
-};
 
-user.hi(); // John (the simple call works)
+function Calculator()
+{
+	this.read = function()
+	{	this.a = +prompt("Enter value 1: ", 0);
+		this.b = +prompt("Enter value 2: ", 0);
+	};
+	this.sum = function()
+	{
+		return (this.a + this.b);
+	};
+	this.mult = function()
+	{
+		return (this.a * this.b);
+	};
+}
 
-// now let's call user.hi or user.bye depending on the name
-(user.name == "John" ? user.hi : user.bye)(); // Error!
+let calculator =  new Calculator();
+calculator.read();
+alert("Sum = "+ calculator.sum());
+alert("Product = "+ calculator.mult());
