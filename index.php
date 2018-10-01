@@ -7,6 +7,5 @@
 	<body>
 		<p>Pixis t'aide a trouver ton role dans le monde de demain!</p>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-		<script src="/js/map.js"></script>
 	</body>
 </html>
