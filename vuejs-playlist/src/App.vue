@@ -1,31 +1,31 @@
 <template>
   <div>
-  <h1>{{title}}</h1>
-  <!--global nesting-->
-  <ninjas></ninjas>
+    <app-header></app-header>
+    <app-footer></app-footer>
+    <app-ninjas></app-ninjas>
   </div>
 </template>
 
 <script>
-import Ninjas from './Ninjas.vue'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Ninjas from './components/Ninjas.vue';
+
+
 
 export default {
   components:{
-    'ninjas':Ninjas,
+    'app-header':Header,
+    'app-footer':Footer,
+    'app-ninjas':Ninjas,
   },
   data () {
     return {
-      title:"Ninja App",
-    }
+    };
   },
-  methods:{
-
-  }
 }
 </script>
 
-<style scoped>
-h1{
-  color:purple;
-}
+<style>
+
 </style>
